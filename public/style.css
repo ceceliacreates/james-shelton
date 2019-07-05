@@ -1,3 +1,52 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -6,7 +55,6 @@
 body {
     font-family: 'Raleway', sans-serif;
 }
-
 .container {
   display: grid;
   grid-template-columns: 40% 1fr 1fr;
@@ -20,9 +68,17 @@ body {
   grid-area: 1 / 1 / 2 / 4;
   background-color: gray;
 }
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/*STYLING FOR LANDING PAGE*/
 h1 {
   padding-top: 1%;
   padding-left: 5%;
+  font-size: 2em;
+  font-weight: bolder;
 }
 h2,
 h5 {
@@ -32,9 +88,13 @@ h5 {
 }
 h2 {
   padding-bottom: 0.5em;
+  font-size: 1.5em;
+  font-weight: bolder;
 }
 h5 {
   padding-top: 0.25em;
+  font-size: .83em;
+  font-weight: bolder;
 }
 .artist {
   grid-area: 2 / 1 / 4 / 2;
@@ -60,7 +120,7 @@ h5 {
   background-size: cover;
   padding-top: 50%;
 }
-
+/*MEDIA QUERIES FOR LANDING PAGE*/
 @media only screen and (max-width: 768px) {
   h1 {
     padding-left: 1%;
@@ -114,4 +174,24 @@ h5 {
       padding-left: 1%;
       padding-top: 5%;
   }
+}
+/*STYLING FOR ABOUT PAGE*/
+.about {
+  grid-area: 2 / 1 / 4 / 4;
+  background-color: blue;
+}
+.about h2 {
+  color: white;
+  background-color: blue;
+  padding: 0px;
+}
+/*STYLING FOR PRODUCT PAGES*/
+.products {
+  grid-area: 2 / 1 / 4 / 4;
+  background-color: blue;
+}
+.products h2 {
+  color: white;
+  background-color: plum;
+  padding: 0px;
 }
