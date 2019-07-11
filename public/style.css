@@ -104,8 +104,10 @@ h5 {
 }
 .landscapes {
   grid-area: 2 / 2 / 3 / 4;
-  background-image: url(assets/yannis-papanastasopoulos-kKzbyDeb62M-unsplash.jpg);
-  background-size: cover;
+  background-image: url(assets/img_012.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
   padding-top: 25%;
 }
 .figures {
@@ -188,7 +190,6 @@ h5 {
 /*STYLING FOR PRODUCT PAGES*/
 .products {
   grid-area: 2 / 1 / 4 / 4;
-  background-color: blue;
 }
 .products h2 {
   color: white;
