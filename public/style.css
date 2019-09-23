@@ -190,6 +190,7 @@ h5 {
 /*STYLING FOR PRODUCT PAGES*/
 .products {
   grid-area: 2 / 1 / 4 / 4;
+  background-color: black;
 }
 .products h2 {
   color: white;
