@@ -54,6 +54,7 @@ table {
 }
 body {
     font-family: 'Raleway', sans-serif;
+    background-color: black;
 }
 .container {
   display: grid;
@@ -62,7 +63,7 @@ body {
   grid-column-gap: 2px;
   grid-row-gap: 2px;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 .header {
   grid-area: 1 / 1 / 2 / 4;
@@ -118,7 +119,7 @@ h5 {
 }
 .illustrations {
   grid-area: 3 / 3 / 4 / 4;
-  background-image: url(assets/withaeons.PNG);
+  background-image: url(assets/illustrations/illustration1.jpg);
   background-size: cover;
   padding-top: 50%;
 }
@@ -196,4 +197,14 @@ h5 {
   color: white;
   background-color: plum;
   padding: 0px;
+}
+.thumb {
+  border-top: solid 5px black;
+  opacity: 0.5;
+}
+.thumb:hover {
+  opacity: 1;
+}
+.thumb.selected {
+  opacity: 1;
 }

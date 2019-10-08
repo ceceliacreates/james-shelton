@@ -1,27 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Illustrations</title>
-    <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-    crossorigin="anonymous"
-  />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-<div class="container">
-    <div class="header">
-        <a href="/"> <h1>SHIZZLEMINIS.COM <i class="fas fa-skull"></i></h1></a>
-     </div>
-    <div class="products">
-        <h2>Illustration products go here!</h2>
+    <div class="container">
+        <div class="header">
+            <a href="/">
+                <h1>SHIZZLEMINIS.COM <i class="fas fa-skull"></i></h1>
+            </a>
+        </div>
+        <div class="products">
+            <div style="width: 35%; margin: auto; padding: 0">
+                <img class="slide" id="illustration1" src="assets/illustrations/illustration1.jpg"
+                    style="display: block; width: 100%; height: auto">
+                <img class="slide" id="illustration2" src="assets/illustrations/illustration2.jpg"
+                    style="display: none; width: 100%; height: auto">
+                <img class="slide" id="illustration3" src="assets/illustrations/illustration3.jpg"
+                    style="display: none; width: 100%; height: auto">
+                <img class="slide" id="illustration4" src="assets/illustrations/illustration4.jpg"
+                    style="display: none; width: 100%; height: auto">
+                <img class="slide" id="illustration5" src="assets/illustrations/illustration5.jpg"
+                    style="display: none; width: 100%; height: auto">
+
+                <div style="display: flex; flex-flow: row-wrap">
+                    <img style="width: 20%;" class="thumb selected" id="thumbillustration1" src="assets/illustrations/illustration1.jpg"
+                        onclick="selectImage(illustration1)">
+                    <img style="width: 20%;" class="thumb" id="thumbillustration2" src="assets/illustrations/illustration2.jpg"
+                        onclick="selectImage(illustration2)">
+                    <img style="width: 20%;" class="thumb" id="thumbillustration3" src="assets/illustrations/illustration3.jpg"
+                        onclick="selectImage(illustration3)">
+                    <img style="width: 20%;" class="thumb" id="thumbillustration4" src="assets/illustrations/illustration4.jpg"
+                        onclick="selectImage(illustration4)">
+                    <img style="width: 20%;" class="thumb" id="thumbillustration5" src="assets/illustrations/illustration5.jpg"
+                        onclick="selectImage(illustration5)">
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+    <script>
+        function selectImage(id) {
+            const imageId = id.id
+            const thumbId = "thumb" + id.id
+            //sets display for all slides to none, identifies selected slide, and sets display to block
+            const slides = document.querySelectorAll(".slide");
+            slides.forEach(image => image.style.display = "none")
+            const selected = document.getElementById(imageId);
+            selected.style.display = "block";
+            //gets all thumbs, removes class of selected, then adds selected class to selected thumb
+            const thumbs = document.querySelectorAll(".thumb");
+            thumbs.forEach(image => image.classList.remove("selected"));
+            const selectedThumb = document.getElementById(thumbId);
+            selectedThumb.classList.add("selected");
+        }
+    </script>
 </body>
+
 </html>
