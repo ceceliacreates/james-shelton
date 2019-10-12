@@ -47,6 +47,8 @@ table {
 	border-spacing: 0;
 }
 
+/*CUSTOM CSS*/
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -178,16 +180,7 @@ h5 {
       padding-top: 5%;
   }
 }
-/*STYLING FOR ABOUT PAGE*/
-.about {
-  grid-area: 2 / 1 / 4 / 4;
-  background-color: blue;
-}
-.about h2 {
-  color: white;
-  background-color: blue;
-  padding: 0px;
-}
+
 /*STYLING FOR PRODUCT PAGES*/
 .products {
   grid-area: 2 / 1 / 4 / 4;
@@ -198,9 +191,29 @@ h5 {
   background-color: plum;
   padding: 0px;
 }
+.slide {
+  width: 100%; 
+  height: auto;
+}
+.slides {
+  width: 35%; 
+  margin: auto; 
+  padding: 0
+}
+.hidden {
+  display: none;
+}
+.thumbs {
+  display: flex; 
+  flex-flow: row wrap;
+}
 .thumb {
   border-top: solid 5px black;
   opacity: 0.5;
+  width: 12.5%;
+}
+.illustration {
+  width: 20%;
 }
 .thumb:hover {
   opacity: 1;
